@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <button onclick="cong()">cong</button>
+    <button onclick="tru()">tru</button>
+    <button onclick="nhan()">nhan</button>
+    <button onclick="chia()">chia</button>
+
+    <h3 id="kq"></h3>
+    <script>
+        function cong() {
+            let a = +document.getElementById('a').value;
+            let b = +document.getElementById('b').value;
+            document.getElementById('kq').innerHTML = a + b;
+        }
+        function tru() {
+            let a = +document.getElementById('a').value;
+            let b = +document.getElementById('b').value;
+            document.getElementById('kq').innerHTML = a - b;
+        } function nhan() {
+            let a = +document.getElementById('a').value;
+            let b = +document.getElementById('b').value;
+            document.getElementById('kq').innerHTML = a * b;
+        } function chia() {
+            let a = +document.getElementById('a').value;
+            let b = +document.getElementById('b').value;
+            document.getElementById('kq').innerHTML = a / b;
+        }
+    </script>
+</body>
+</html>
