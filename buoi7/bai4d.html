@@ -14,13 +14,13 @@
     <script>
         function tinh() {
             let nam = +document.getElementById('nam').value;
-            let theKy = 0;
+            var theKy = 0;
             if (nam % 100 == 0) {
                 theKy = nam / 100;
             } else {
                 theKy = nam / 100 + 1;
             }
-            document.getElementById('kq').innerHTML = theKy;
+            document.getElementById('kq').innerHTML = parseInt(theKy);
         }
     </script>
 
