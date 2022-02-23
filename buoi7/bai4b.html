@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a">
+    <input type="text" id="b">
+    <button onclick="pow()">a^2</button>
+    <button onclick="powb()">a^b</button>
+    <p id="kq"> kết quả</p>
+    <script>
+        function pow() {
+            let b = +document.getElementById('b').value;
+            let a = +document.getElementById('a').value;
+            document.getElementById('kq').innerHTML = a * a;
+        }
+        function powb() {
+            let a = +document.getElementById('a').value;
+            let b = +document.getElementById('b').value;
+            let c = pow(a, b);
+            document.getElementById('kq').innerHTML = c;
+        }
+    </script>
+</body>
+</html>

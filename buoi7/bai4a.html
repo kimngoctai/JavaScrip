@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="a">
+    <button onclick="chuvi()">chu vi</button>
+    <button onclick="dientich()">dien tich</button>
+    <button onclick="canhhv()">hinh vuong co canh</button>
+
+    <p id="kq"> kết quả</p>
+    <script>
+        function chuvi() {
+            let a = +document.getElementById('a').value;
+            document.getElementById('kq').innerHTML = a * 4;
+        } function dientich() {
+            let a = +document.getElementById('a').value;
+            document.getElementById('kq').innerHTML = a * a;
+        } function canhhv() {
+            let a = +document.getElementById('a').value;
+            document.getElementById('kq').innerHTML = a;
+        }
+    </script>
+</body>
+</html>
