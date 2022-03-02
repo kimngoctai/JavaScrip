@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="border: 1px solid black; height: 190px; width: 190px; background-color: black;">
+        <img id="tank"
+            src="https://s3.ap-southeast-1.amazonaws.com/learn.codegym.vn/media/public/2020/12/02171059/tank.png"
+            style="position: relative; top: 0px; right: 0px  " width="19" height="19">
+    </div>
+    <button id="down" onclick="down()">down</button>
+    <button id="left" onclick="left()">left</button>
+    <button id="right" onclick="right()">rgiht</button>
+    <button id="up" onclick="up()">up</button>
+
+    <script>
+
+        let start = 19;
+        let k = 1;
+        let q = 1;
+        let b = 1;
+        function up() {
+            if (k > 0) {
+                document.getElementById("tank").style["top"] = start * (k - 1) + "px";
+                k--;
+
+            }
+        }
+        function down() {
+            if (k < 10) {
+                document.getElementById("tank").style["top"] = start * k + "px";
+                k++;
+            }
+        }
+        function left() {
+            if (q > 0) {
+                q--;
+                document.getElementById("tank").style["left"] = start * q + "px";
+
+            }
+        }
+        function right() {
+            if (q < 10) {
+                document.getElementById("tank").style["left"] = start * q + "px";
+                q++;
+            }
+        }
+    </script>
+</body>
+</html>

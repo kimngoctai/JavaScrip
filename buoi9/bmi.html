@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Kiểm tra BMI</h1>
+    <p>nhập chiều cao</p>
+    <input type="text" name="" id="chieuCao">
+    <p>nhập câng nặng</p>
+    <input type="text" name="" id="canNang">
+    <button id="kTra" onclick="check()">kiểm tra ></button>
+    <h1 id="kq"></h1>
+
+    <script>
+        function check() {
+            let chieuCao = document.getElementById("chieuCao").value;
+            let canNang = document.getElementById("canNang").value;
+            let bmi = canNang / (chieuCao * chieuCao);
+
+            if (bmi < 16) {
+                document.getElementById("kq").innerHTML = "Gầy độ III"
+            } else if (bmi >= 18.5 && bmi < 25) {
+                document.getElementById("kq").innerHTML = "Bình thường"
+            } else if (bmi > 25) {
+                document.getElementById("kq").innerHTML = "Béo phì"
+            } else {
+                document.getElementById("kq").innerHTML = "Ko đo đc"
+            }
+        }
+    </script>
+</body>
+</html>

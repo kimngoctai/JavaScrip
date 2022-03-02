@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+<h2>Giá hoa quả</h2>
+<select id="qua">
+    <option>Ổi</option>
+    <option>Dưa hấu</option>
+    <option>Táo</option>
+    <option>Xoài</option>
+    <option>Cam</option>
+    <option>Chôm chôm</option>
+    <option>Măng cụt</option>
+</select>
+
+
+<button type="button" onclick="check()">Xem giá</button><br>
+<p id="check">Giá tiền:</p>
+<script>
+
+
+    function check() {
+
+        let qua = document.getElementById("qua").value;
+        if (qua == "Ổi" || qua == "Dưa hấu") { document.getElementById("check").innerHTML = "Price :20000 VNĐ/kg" }
+        if (qua == "Táo" || qua == "Xoài") { document.getElementById("check").innerHTML = "Price :30000 VNĐ/kg" }
+        if (qua == "Chôm chôm" || qua == "Cam") { document.getElementById("check").innerHTML = "Price :40000 VNĐ/kg" }
+        if (qua == "Măng cụt") { document.getElementById("check").innerHTML = "Price :50000 VNĐ/kg" }
+    }
+
+</script>
+
+</body>
+</html>
