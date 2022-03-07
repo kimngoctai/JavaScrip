@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <h1 id="out">dãy Fibonacci :</h1> -->
+    <script>
+        let n = prompt('nhập vào 1 số;')
+        let a = 0;
+        let d = 0;
+        let k = 1;
+        let dem = n;
+        if (n == 1) {
+            document.write('1');
+        } else {
+            document.write('1' + ' ');
+
+        }
+        for (let i = 0; i <= n - 2; i++) {
+
+            d = a + k;
+            a = k;
+            k = d;
+
+            document.write(d + ' ');
+        }
+
+        if (n == 1) {
+            document.write('1');
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+</head>
+<h2>Giá hoa quả</h2>
+<div>
+    Toán :
+    <input type="text" id="toan">
+</div>
+<div>
+    Anh :
+    <input type="text" id="anh">
+</div>
+<div>
+    Văn :
+    <input type="text" id="van">
+</div>
+<select id="khuVuc">
+    <option>KV1</option>
+    <option>KV2</option>
+    <option>KV2-NT</option>
+    <option>KV3</option>
+</select>
+
+
+<button type="button" onclick="check()">Xem điểm</button><br>
+<p id="check">Điểm là:</p>
+<script>
+
+
+    function check() {
+        let toan = parseInt(document.getElementById("toan").value);
+        let anh = parseInt(document.getElementById("anh").value);
+        let van = parseInt(document.getElementById("van").value);
+        let khuVuc = document.getElementById("khuVuc").value;
+        let tong = toan + anh + van;
+        let dem = 0;
+        let kv1 = 0.75;
+        let kv2 = 0.5;
+        let kv2nt = 0.25;
+        if (khuVuc == "KV1") {
+            dem = tong + kv1;
+            document.getElementById("check").innerHTML = dem;
+        }
+
+
+        if (khuVuc == "KV2") {
+            dem = tong + kv2;
+            document.getElementById("check").innerHTML = dem
+        }
+        if (khuVuc == "KV2-NT") {
+            dem = tong + kv2nt;
+            document.getElementById("check").innerHTML = dem
+        }
+        if (khuVuc == "KV3") { document.getElementById("check").innerHTML = tong }
+    }
+
+</script>
+
+</body>
+</html>
