@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Bài3: cho trước 1 mảng n phần tử. Viết code tính hiệu của max và min -->
+
+    <script>
+        let arr = [1, 5, 2, 6, 8, 9, 12, 6];
+        let max = 1;
+        let min = 1;
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] < min) {
+                min = arr[i];
+            }
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        document.writeln(max - min);
+    </script>
+</body>
+</html>
