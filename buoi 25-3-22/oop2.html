@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+        class HocSinh {
+            ten;
+            tuoi;
+            dtb;
+            constructor(x, y, z) {
+                this.ten = x;
+                this.tuoi = y;
+                this.dtb = z;
+            }
+            hienThi() {
+                document.write(this.ten + ": " + this.tuoi + ": " + this.tuoi + "<br>");
+            }
+        }
+        let hs1 = new HocSinh('NA', 12, 55);
+        hs1.hienThi();
+        let hs2 = new HocSinh('Aa', 2, 15);
+        hs2.hienThi();
+
+    </script>
+</body>
+</html>

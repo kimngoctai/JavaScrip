@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="200" height="100"></canvas>
+    <script>
+        let cv = document.getElementById('myCanvas').getContext('2d');
+
+        class HinhChuNhat {
+            rong;
+            dai;
+            mau;
+        }
+        let hcn1 = new HinhChuNhat();
+        hcn1.rong = '20';
+        hcn1.dai = '39';
+        hcn1.mau = 'blue';
+        cv.rect(10, 10, this.rong, this.dai);
+        cv.fillStyle = 'this.mau';
+        cv.fill();
+
+
+        
+        let hcn2 = new HinhChuNhat(2, 6, "'blue'");
+        hcn2.hienThi();
+    </script>
+</body>
+</html>

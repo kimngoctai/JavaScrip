@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function bacNhat(a, b) {
+            let nghiem = "";
+            if (a == 0 && b == 0) {
+                nghiem = "phuong trinh vo so nghiem";
+            } else if (a == 0 && b != 0) {
+                nghiem = "phuong trinh vo  nghiem";
+
+            } else {
+                nghiem = -b / a;
+            }
+            return nghiem;
+
+        }
+        let tinhPt = bacNhat(5, 8)
+        alert(tinhPt);
+    </script>
+</body>
+</html>

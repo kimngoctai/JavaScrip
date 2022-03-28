@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function show() {
+            alert('tai');
+        }
+        show();
+        function show2(name) {
+            alert(name);
+
+        }
+        show2('tai');
+        function tinhTich(a, b) {
+            let tong = a + b;
+            return tong;
+        }
+        let tinhTong = tinhTich(5, 2)
+        alert(tinhTong);
+
+        function sum(arr) {
+            let max = arr[0];
+            for (let i = 0; i < arr.length; i++) {
+                if (max < arr[i]) {
+                    max = arr[i];
+                }
+            }
+            return max;
+        }
+        let m = sum([1, 2, 4, 5]);
+        alert(m);
+
+
+        function find(arr, x) {
+
+            let rs = -1;
+            for (let i = 0; i < arr.length; i++) {
+                if (arr[i] == x) {
+                    rs = i;
+                }
+            }
+            return rs;
+        }
+        let m = find([1, 2, 3, 4], 8);
+        alert(m);
+    </script>
+</body>
+</html>

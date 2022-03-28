@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="1000" height="1000"></canvas>
+    <script>
+        class HinhChuNhat {
+            x;
+            y;
+            mau;
+            cd;
+            cr;
+            constructor(x, y, z, t, u) {
+                this.x = x;
+                this.y = y;
+                this.mau = z;
+                this.cd = t;
+                this.cr = u;
+            }
+            hienThi() {
+                let cv = document.getElementById('myCanvas').getContext('2d');
+                cv.fillRect(this.x, this.y, this.cd, this.cr);
+                cv.fillStyle = this.mau;
+
+            }
+        }
+        let hcn1 = new HinhChuNhat(12, 11, 'red', 100, 200);
+        hcn1.hienThi();
+        let hcn2 = new HinhChuNhat(90, 100, 'blue', 100, 200);
+        hcn2.hienThi();
+    </script>
+</body>
+</html>

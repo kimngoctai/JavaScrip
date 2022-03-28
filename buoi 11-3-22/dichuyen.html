@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .game {
+            width: 600px;
+            height: 200px;
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="game"></div>
+    <img src="https://s199.imacdn.com/ta/2017/11/09/6b47b524a2e47c4f_74a2df171f5dfac7_12417615101894628154671.jpg"
+        id="img" alt="" style="width: 200px; position: relative; left: 0; top: 0;">
+    <button onclick="sangTrai()">Sang Trái</button>
+    <button onclick="sangPhai()">Sang Phải</button>
+    <button onclick="len()">len</button>
+    <button onclick="xuong()">xuong</button>
+    <button onclick="cheoXuongPhai()">Xuong phai</button>
+    <button onclick="cheoXuongTrai()">Xuong trai</button>
+
+    <script>
+        let x = document.getElementById('img');
+        function sangPhai() {
+            x.style.left = parseInt(x.style.left) + 10 + 'px';
+        } function sangTrai() {
+            x.style.left = parseInt(x.style.left) - 10 + 'px';
+        } function xuong() {
+            x.style.top = parseInt(x.style.top) + 10 + 'px';
+        } function len() {
+            x.style.top = parseInt(x.style.top) - 10 + 'px';
+        } function cheoXuongPhai() {
+            x.style.top = parseInt(x.style.top) + 10 + 'px';
+            x.style.left = parseInt(x.style.left) + 10 + 'px';
+        } function cheoXuongTrai() {
+            x.style.left = parseInt(x.style.left) - 10 + 'px';
+            x.style.top = parseInt(x.style.top) + 10 + 'px';
+
+        }
+        window.addEventListener('keydown', (evt) => {
+            console.log(evt);
+            if (evt.key == "ArrowRight") {
+                if (parseInt(x.style.left) < 600 - 190) {
+                    x.style.left = parseInt(x.style.left) + 10 + 'px';
+                }
+            }
+            if (evt.key == "ArrowLeft") {
+                x.style.left = parseInt(x.style.left) - 10 + 'px';
+            }
+            if (evt.key == "ArrowUp") {
+                if (parseInt(x.style.top) > 10)
+                    x.style.top = parseInt(x.style.top) - 10 + 'px';
+            }
+            if (evt.key == "ArrowDown") {
+                x.style.top = parseInt(x.style.top) + 10 + 'px';
+
+            }
+            if (evt.key == "z") {
+                x.style.top = parseInt(x.style.top) + 10 + 'px';
+                x.style.left = parseInt(x.style.left) + 10 + 'px';
+            }
+        })
+    </script>
+</body>
+</html>
